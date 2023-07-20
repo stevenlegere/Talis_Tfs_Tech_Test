@@ -28,28 +28,57 @@ export class Element {
   // }
 }
 
+
+
 export class List {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(...args) {
+    this._length = 0;
+    this._head = null;
+    this._tail = null;
+    args.forEach(arg => this.add(arg));
   }
 
   add(nextValue) {
-    throw new Error('Remove this statement and implement this function');
+    const newElement = new Element(nextValue);
+    if (this._head === null) {
+      this._head = newElement;
+      this._tail = newElement;
+    } else {
+      this._tail.next_ = newElement;
+      this._tail = newElement;
+    }
+    this._length++;
   }
 
   get length() {
-    throw new Error('Remove this statement and implement this function');
+    return this._length;
   }
 
-  get head() {
-    throw new Error('Remove this statement and implement this function');
-  }
-
-  toArray() {
-    throw new Error('Remove this statement and implement this function');
-  }
-
-  reverse() {
-    throw new Error('Remove this statement and implement this function');
-  }
 }
+
+
+// export class List {
+//   constructor() {
+//     throw new Error('Remove this statement and implement this function');
+//   }
+
+//   add(nextValue) {
+//     throw new Error('Remove this statement and implement this function');
+//   }
+
+//   get length() {
+//     throw new Error('Remove this statement and implement this function');
+//   }
+
+//   get head() {
+//     throw new Error('Remove this statement and implement this function');
+//   }
+
+//   toArray() {
+//     throw new Error('Remove this statement and implement this function');
+//   }
+
+//   reverse() {
+//     throw new Error('Remove this statement and implement this function');
+//   }
+// }
