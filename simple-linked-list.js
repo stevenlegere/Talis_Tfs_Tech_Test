@@ -23,9 +23,9 @@ export class Element {
     return this._next;
   }
 
-  // set next(newNext) {
-  //   this._next = newNext;
-  // }
+  set next(newNext) {
+    this._next = newNext;
+  }
 }
 
 
@@ -44,16 +44,31 @@ export class List {
       this._head = newElement;
       this._tail = newElement;
     } else {
-      this._tail.next_ = newElement;
+      this._tail.next = newElement;
       this._tail = newElement;
     }
     this._length++;
   }
-
+  
   get length() {
     return this._length;
   }
 
+ // new Lists have a null head element
+  get head() {
+    return this._head;
+  }
+
+  // adding an Element to an empty list sets the head Element
+  toArray() {
+    const result = [];
+    let currentElement = this._head;
+    while (currentElement !== null) {
+      result.push(currentElement.value);
+      currentElement = currentElement.next;
+    }
+    return result;
+  }
 }
 
 
