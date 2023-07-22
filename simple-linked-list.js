@@ -56,20 +56,23 @@ export class List {
 
  // new Lists have a null head element
   get head() {
-    return this._head;
+    return this._head ? this._head.value : null;
+    // ? this._head.value : null; had me stumpled for a while. The head getter was returning the element object instead of the value.
   }
 
   // adding an Element to an empty list sets the head Element
   toArray() {
     const result = [];
-    let currentElement = this._head;
-    while (currentElement !== null) {
-      result.push(currentElement.value);
-      currentElement = currentElement.next;
+    let current = this._head;
+    while (current) {
+      result.push(current.value);
+      current = current.next;
     }
     return result;
+   }
   }
-}
+
+
 
 
 // export class List {
