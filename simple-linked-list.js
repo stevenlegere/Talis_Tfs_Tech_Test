@@ -5,7 +5,12 @@
 // The constructor of the List class should be able to accept an arbitrary number of arguments,
 
 
-export class Element {
+// This is only a SKELETON file for the 'Simple Linked List' exercise. It's been provided as a
+// convenience to get you started writing code faster.
+//
+// The constructor of the List class should be able to accept an arbitrary number of arguments,
+
+class Element {
   constructor(value) {
     this._value = value;
     this._next = null;
@@ -28,52 +33,59 @@ export class Element {
   }
 }
 
-
-
-export class List {
+class List {
   constructor(...args) {
     this._length = 0;
     this._head = null;
     this._tail = null;
-    args.forEach(arg => this.add(arg));
+    // args.forEach(arg => this.add(arg));
   }
 
   add(nextValue) {
-    const newElement = new Element(nextValue);
+    const newElement = nextValue instanceof Element ? nextValue : new Element(nextValue);
     if (this._head === null) {
       this._head = newElement;
       this._tail = newElement;
     } else {
-      this._tail.next = newElement;
-      this._tail = newElement;
+      newElement.next = this._head;
+      this._head = newElement;
     }
     this._length++;
   }
   
+
   get length() {
     return this._length;
   }
 
- // new Lists have a null head element
   get head() {
-    return this._head ? this._head.value : null;
-    // ? this._head.value : null; had me stumpled for a while. The head getter was returning the element object instead of the value.
+    return this._head ? this._head : null;
   }
+}
 
-  // adding an Element to an empty list sets the head Element
-  toArray() {
-    const result = [];
-    let current = this._head;
-    while (current) {
-      result.push(current.value);
-      current = current.next;
-    }
-    return result;
-   }
-  }
+module.exports = {
+  List,
+  Element,
+};
+
+// Test code (if this is in the same file, move it to a separate file for testing)
+
+// const myList = new List();
+
+// console.log(myList.head);
+
+// myList.add(10);
+// console.log(myList.head);
+
+// myList.add(20);
+// console.log(myList.head);
+
+// myList.add(30);
+// console.log(myList.head);
 
 
 
+// BELOW IS THE ORGINAL CODE TO WORK FROM - LEFT UNTOUCHED
 
 // export class List {
 //   constructor() {

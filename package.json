@@ -4,7 +4,7 @@
   "author": "Katrina Owen",
   "private": true,
   "license": "MIT",
-  "repository": {
+    "repository": {
     "type": "git",
     "url": "https://github.com/exercism/javascript",
     "directory": "exercises/practice/simple-linked-list"

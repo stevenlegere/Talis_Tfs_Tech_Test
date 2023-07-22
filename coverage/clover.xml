@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1690048792811" clover="3.2.0">
+  <project timestamp="1690048792811" name="All files">
+    <metrics statements="19" coveredstatements="18" conditionals="6" coveredconditionals="5" methods="9" coveredmethods="8" elements="34" coveredelements="31" complexity="0" loc="19" ncloc="19" packages="1" files="1" classes="1"/>
+    <file name="simple-linked-list.js" path="/Users/stevenlegere/Documents/Development/Repositories/Talis-Tfs-Tech-Test/simple-linked-list/simple-linked-list.js">
+      <metrics statements="19" coveredstatements="18" conditionals="6" coveredconditionals="5" methods="9" coveredmethods="8"/>
+      <line num="15" count="10" type="stmt"/>
+      <line num="16" count="10" type="stmt"/>
+      <line num="20" count="4" type="stmt"/>
+      <line num="24" count="0" type="stmt"/>
+      <line num="28" count="1" type="stmt"/>
+      <line num="32" count="2" type="stmt"/>
+      <line num="38" count="8" type="stmt"/>
+      <line num="39" count="8" type="stmt"/>
+      <line num="40" count="8" type="stmt"/>
+      <line num="45" count="7" type="cond" truecount="1" falsecount="1"/>
+      <line num="46" count="7" type="cond" truecount="2" falsecount="0"/>
+      <line num="47" count="5" type="stmt"/>
+      <line num="48" count="5" type="stmt"/>
+      <line num="50" count="2" type="stmt"/>
+      <line num="51" count="2" type="stmt"/>
+      <line num="53" count="7" type="stmt"/>
+      <line num="58" count="3" type="stmt"/>
+      <line num="62" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="66" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

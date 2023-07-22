@@ -62,7 +62,7 @@ describe('List class', () => {
     expect(list.head.value).toEqual(1);
   });
 
-  xtest('adding a second Element updates the head Element', () => {
+  test('adding a second Element updates the head Element', () => {
     const list = new List();
     const element1 = new Element(1);
     const element2 = new Element(3);
