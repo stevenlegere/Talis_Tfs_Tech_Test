@@ -71,7 +71,7 @@ describe('List class', () => {
     expect(list.head.value).toEqual(3);
   });
 
-  xtest('can get the next Element from the head', () => {
+  test('can get the next Element from the head', () => {
     const list = new List();
     const element1 = new Element(1);
     const element2 = new Element(3);
@@ -80,7 +80,7 @@ describe('List class', () => {
     expect(list.head.next.value).toEqual(1);
   });
 
-  xtest('can be initialized with an array', () => {
+  test('can be initialized with an array', () => {
     const list = new List([1, 2, 3]);
     expect(list.length).toEqual(3);
     expect(list.head.value).toEqual(3);
