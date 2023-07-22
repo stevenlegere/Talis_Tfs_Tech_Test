@@ -50,9 +50,9 @@ class Element {
 
 class List {
   constructor(...args) {
-    this._length = 0;  // Initialize the list length to 0.
-    this._head = null; // Initialize the head of the list to null.
-    this._tail = null; // Initialize the tail of the list to null.
+    this._length = 0;  // Initialise the list length to 0.
+    this._head = null; // Initialise the head of the list to null.
+    this._tail = null; // Initialise the tail of the list to null.
 
     // If the constructor is called with a single array argument, add its elements to the list.
     if (args.length === 1 && Array.isArray(args[0])) {
