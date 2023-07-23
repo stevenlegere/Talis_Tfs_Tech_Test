@@ -5,48 +5,28 @@
 // The constructor of the List class should be able to accept an arbitrary number of arguments,
 
 
-// This is only a SKELETON file for the 'Simple Linked List' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
-// The constructor of the List class should be able to accept an arbitrary number of arguments,
-
 class Element {
   constructor(value) {
-    this._value = value;
-    this._next = null;
+    this._value = value; // Initialise the value of the element.
+    this._next = null;  // Initialise the next pointer of the element.
   }
 
   get value() {
-    return this._value;
+    return this._value; // Getter to return the value of the element.
   }
 
   set value(newValue) {
-    this._value = newValue;
+    this._value = newValue; // Setter to update the value of the element.
   }
 
   get next() {
-    return this._next;
+    return this._next; // Getter to return the next pointer of the element.
   }
 
   set next(newNext) {
-    this._next = newNext;
+    this._next = newNext; // Setter to update the next pointer of the element.
   }
 }
-
-// const element1 = new Element(10);
-// console.log(element1.value);
-
-// element1.value = 20;
-// console.log(element1.value);
-
-// const element2 = new Element(30);
-// console.log(element2.value);
-
-// element1.next = element2;
-
-// console.log(element1.next);
-
-// console.log(element1.next.value);
 
 class List {
   constructor(...args) {
