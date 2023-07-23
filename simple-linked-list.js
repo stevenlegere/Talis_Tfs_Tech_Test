@@ -43,13 +43,6 @@ class List {
     }
   }
 
-  // Static method to create a new List from an array of elements.
-  static fromArray(...args) {
-    const list = new List(); // Create a new instance of List.
-    args.reverse().forEach(element => list.add(element)); // Add elements from the array in reverse order.
-    return list; // Return the new List.
-  }
-
   // Method to add a new element to the head of the list.
   add(nextValue) {
     const newElement = nextValue instanceof Element ? nextValue : new Element(nextValue);
