@@ -109,7 +109,7 @@ class List {
     }
 }
 
-// Had to use common js model as ECMA Script waw not working with jest and therefor couldn't print output to node.js for proof of usage
+// Had to use common js model to export as ECMA Script not working with jest and therefor couldn't print output to node.js for proof of usage
 module.exports = {
   List,
   Element,
