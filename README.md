@@ -36,7 +36,14 @@ The Element class represents the individual elements in the list. Each element c
 
 ### Research material
 
-[geeksforgeeks](https://www.geeksforgeeks.org/insertion-in-linked-list/amp/)
+[geeks for geeks - insertion linked lists](https://www.geeksforgeeks.org/insertion-in-linked-list/amp/)
+[free code camp - how to implement linked lists](https://www.freecodecamp.org/news/implementing-a-linked-list-in-javascript/)
+[free code camp - getters and setters](https://www.freecodecamp.org/news/typescript-javascript-getters-and-setters-are-they-useless/)
+[geeks for geeks - types of linked lists](https://www.geeksforgeeks.org/types-of-linked-list/)
+[medium - what's a linked list](https://medium.com/basecs/whats-a-linked-list-anyway-part-1-d8b7e6508b9d)
+[educative - singly linked list](https://www.educative.io/answers/what-is-a-singly-linked-list)
+
+
 
 
 
