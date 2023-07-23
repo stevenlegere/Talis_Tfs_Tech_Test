@@ -106,28 +106,34 @@ class List {
     }
     return result; // Return the array representation of the list.
   }
+
+// Method to reverse the list
+    reverse() {
+      let prev = null;
+      let current = this._head;
+      let next = null;
+      
+// Traverse the list and reverse the 'next' pointer of each element
+      while (current !== null) {
+        next = current.next;
+        current.next = prev;
+        prev = current;
+        current = next;
+      }
+
+// Update the head and tail pointers of the list
+      this._tail = this._head;
+      this._head = prev;
+
+      return this; // Return the reversed list
+    }
 }
 
-// Export the List and Element classes to be used in other modules.
+// Had to use common js model as ECMA Script waw not working with jest and therefor couldn't print output to node.js for proof of usage
 module.exports = {
   List,
   Element,
 };
-// Test code (if this is in the same file, move it to a separate file for testing)
-
-// const myList = new List();
-
-// console.log(myList.head);
-
-// myList.add(10);
-// console.log(myList.head);
-
-// myList.add(20);
-// console.log(myList.head);
-
-// myList.add(30);
-// console.log(myList.head);
-
 
 
 
