@@ -34,6 +34,9 @@ The Element class represents the individual elements in the list. Each element c
 - reverse() the order of the elements in the list. This method modifies the list by placement.
 - Returns the reversed list.
 
+### Research material
+
+[geeksforgeeks](https://www.geeksforgeeks.org/insertion-in-linked-list/amp/)
 
 
 
