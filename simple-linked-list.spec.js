@@ -128,4 +128,16 @@ describe('Lists with multiple elements', () => {
       10, 9, 8, 7, 6, 5, 4, 3, 2, 1,
     ]);
   });
+
+  test('should insert an element after the specified value', () => {
+    const insertList = new List([4, 3, 1]);
+    const newValue = 2;
+    insertList.insertAfter(1, newValue);
+
+    const expectedArray = [1, 2, 3, 4];
+    const resultArray = insertList.toArray();
+
+    expect(resultArray).toEqual(expectedArray);
+    expect(insertList.length).toBe(4);
+  });
 });

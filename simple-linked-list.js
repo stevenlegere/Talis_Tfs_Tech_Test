@@ -29,17 +29,19 @@ class Element {
 }
 
 class List {
-  constructor(...args) {
-    this._length = 0;  // Initialise the list length to 0.
-    this._head = null; // Initialise the head of the list to null.
-    this._tail = null; // Initialise the tail of the list to null.
+  constructor(values) {
+    this._length = 0;
+    this._head = null;
+    this._tail = null;
 
     // If the constructor is called with a single array argument, add its elements to the list.
-    if (args.length === 1 && Array.isArray(args[0])) {
-      args[0].forEach(arg => this.add(arg));
+    if (Array.isArray(values)) {
+      values.forEach(value => this.add(value));
     } else {
       // If the constructor is called with multiple arguments or without arguments, add them to the list.
-      args.forEach(arg => this.add(arg));
+      for (let i = 0; i < arguments.length; i++) {
+        this.add(arguments[i]);
+      }
     }
   }
 
@@ -81,6 +83,7 @@ class List {
   }
 
 // Method to reverse the list
+// change the next pointer of each element to point to the previous element
     reverse() {
       let prev = null;
       let current = this._head;
@@ -100,6 +103,36 @@ class List {
 
       return this; // Return the reversed list
     }
+
+// Define the insertAfter method
+insertAfter(valueToInsertAfter, newValue) {
+  const newElement = new Element(newValue);
+  let current = this._head;
+
+  while (current !== null) {
+    if (current.value === valueToInsertAfter) {
+      newElement.next = current.next;
+      current.next = newElement;
+      if (current === this._tail) {
+        this._tail = newElement;
+      }
+      this._length++;
+      return this;
+    }
+    current = current.next;
+  }
+
+  // If the element with valueToInsertAfter is not found, add the new element at the end of the list.
+  if (this._head === null) {
+    this._head = newElement;
+    this._tail = newElement;
+  } else {
+    this._tail.next = newElement;
+    this._tail = newElement;
+  }
+  this._length++;
+  return this;
+}
 }
 
 // Had to use common js model to export as ECMA Script not working with jest and therefor couldn't print output to node.js for proof of usage
